@@ -1,0 +1,32 @@
+
+version: 1.0.0
+maxFileSystemBytes: 512K
+executables:
+{
+	hello = ( helloComponent )
+	audio = ( myAudio )
+}
+bundles:
+{
+	file:
+	{
+		[r] bqtg.wav bqtg.wav
+	}
+}
+bindings:
+{
+	audio.myAudio.le_audio -> audioService.le_audio
+}
+processes:
+{
+	envVars:
+	{
+        LE_LOG_LEVEL = DEBUG
+    }
+	run:
+	{
+		( hello )
+	}
+	maxCoreDumpFileBytes: 512K
+	maxFileBytes: 512K
+}

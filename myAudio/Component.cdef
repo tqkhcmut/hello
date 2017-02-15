@@ -1,0 +1,11 @@
+requires:
+{
+	api:
+	{
+		le_audio.api		
+	}
+}
+sources:
+{
+	myAudio.c
+}
