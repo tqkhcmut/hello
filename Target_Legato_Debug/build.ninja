@@ -1,0 +1,161 @@
+# Build script for application 'hello'
+
+# == Auto-generated file.  Do not edit. ==
+
+builddir =Target_Legato_Debug
+
+cFlags = -g -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/supervisor -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/airVantage -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/secureStorage -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/logDaemon -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/atServices -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/modemServices -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/wifi -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/positioning -I/home/kieutq/Desktop/workspace_dev/hello
+
+cxxFlags = -g -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/supervisor -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/airVantage -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/secureStorage -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/logDaemon -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/atServices -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/modemServices -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/wifi -I/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/positioning -I/home/kieutq/Desktop/workspace_dev/hello
+
+ldFlags = -g
+
+target = wp85
+
+ifgenFlags =  --import-dir /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces --import-dir /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc --import-dir /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces --import-dir /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/supervisor --import-dir /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/airVantage --import-dir /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/secureStorage --import-dir /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/logDaemon --import-dir /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/atServices --import-dir /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/modemServices --import-dir /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/wifi --import-dir /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/positioning --import-dir /home/kieutq/Desktop/workspace_dev/hello
+
+rule CompileC
+  description = Compiling C source
+  depfile = $out.d
+  command = /home/kieutq/legato/packages/legato.toolchain.1.7.3.fw_SWI9X15Y_07110900-wp85-wp750x-native-x86_64-201608171142/resources/native/wrapper/arm-poky-linux-gnueabi-gcc --sysroot=/home/kieutq/legato/packages/legato.toolchain.1.7.3.fw_SWI9X15Y_07110900-wp85-wp750x-native-x86_64-201608171142/resources/native/sysroots/armv7a-vfp-neon-poky-linux-gnueabi -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden -DMK_TOOLS_BUILD  -DLEGATO_EMBEDDED $cFlags
+
+rule CompileCxx
+  description = Compiling C++ source
+  depfile = $out.d
+  command = /home/kieutq/legato/packages/legato.toolchain.1.7.3.fw_SWI9X15Y_07110900-wp85-wp750x-native-x86_64-201608171142/resources/native/wrapper/arm-poky-linux-gnueabi-g++ --sysroot=/home/kieutq/legato/packages/legato.toolchain.1.7.3.fw_SWI9X15Y_07110900-wp85-wp750x-native-x86_64-201608171142/resources/native/sysroots/armv7a-vfp-neon-poky-linux-gnueabi -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden  -DMK_TOOLS_BUILD  -DLEGATO_EMBEDDED $cxxFlags
+
+rule LinkCLib
+  description = Linking C library
+  command = /home/kieutq/legato/packages/legato.toolchain.1.7.3.fw_SWI9X15Y_07110900-wp85-wp750x-native-x86_64-201608171142/resources/native/wrapper/arm-poky-linux-gnueabi-gcc --sysroot=/home/kieutq/legato/packages/legato.toolchain.1.7.3.fw_SWI9X15Y_07110900-wp85-wp750x-native-x86_64-201608171142/resources/native/sysroots/armv7a-vfp-neon-poky-linux-gnueabi -shared -o $out $in $ldFlags
+
+rule LinkCxxLib
+  description = Linking C++ library
+  command = /home/kieutq/legato/packages/legato.toolchain.1.7.3.fw_SWI9X15Y_07110900-wp85-wp750x-native-x86_64-201608171142/resources/native/wrapper/arm-poky-linux-gnueabi-g++ --sysroot=/home/kieutq/legato/packages/legato.toolchain.1.7.3.fw_SWI9X15Y_07110900-wp85-wp750x-native-x86_64-201608171142/resources/native/sysroots/armv7a-vfp-neon-poky-linux-gnueabi -shared -o $out $in $ldFlags
+
+rule LinkCExe
+  description = Linking C executable
+  command = /home/kieutq/legato/packages/legato.toolchain.1.7.3.fw_SWI9X15Y_07110900-wp85-wp750x-native-x86_64-201608171142/resources/native/wrapper/arm-poky-linux-gnueabi-gcc --sysroot=/home/kieutq/legato/packages/legato.toolchain.1.7.3.fw_SWI9X15Y_07110900-wp85-wp750x-native-x86_64-201608171142/resources/native/sysroots/armv7a-vfp-neon-poky-linux-gnueabi -o $out $in $ldFlags
+
+rule LinkCxxExe
+  description = Linking C++ executable
+  command = /home/kieutq/legato/packages/legato.toolchain.1.7.3.fw_SWI9X15Y_07110900-wp85-wp750x-native-x86_64-201608171142/resources/native/wrapper/arm-poky-linux-gnueabi-g++ --sysroot=/home/kieutq/legato/packages/legato.toolchain.1.7.3.fw_SWI9X15Y_07110900-wp85-wp750x-native-x86_64-201608171142/resources/native/sysroots/armv7a-vfp-neon-poky-linux-gnueabi -o $out $in $ldFlags
+
+rule CompileJava
+  description = Compiling Java source
+  command = javac -cp $classPath -d $classDestPath $in && $
+            jar -cf $out -C $classDestPath .
+
+rule GenInterfaceCode
+  description = Generating IPC interface code
+  command = mkdir -p $outputDir && ifgen --output-dir $outputDir $ifgenFlags $in
+
+rule MakeDir
+  description = Creating directory
+  command = mkdir -p $out
+
+rule HardLink
+  description = Creating hard link
+  command = ln -T -f $in $out
+
+rule CopyF
+  description = Copying file
+  command = cp -d -f -T $in $out && $
+            chmod $modeFlags $out
+
+rule RegenNinjaScript
+  description = Regenerating build script
+  generator = 1
+  command = mkapp --dont-run-ninja "-t" "wp85" "-o" "Target_Legato_Debug" "-w" "Target_Legato_Debug" "-i" "/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces" "-i" "/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/supervisor" "-i" "/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/airVantage" "-i" "/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/secureStorage" "-i" "/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/logDaemon" "-i" "/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/atServices" "-i" "/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/modemServices" "-i" "/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/wifi" "-i" "/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/positioning" "-s" "/home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/components" "-C" "-g" "-X" "-g" "-L" "-g" "hello.adef"
+
+rule BundleFile
+  description = Bundling file
+  command = cp -T $in $out && $
+            chmod $modeFlags $out
+
+rule MakeAppInfoProperties
+  description = Creating info.properties
+  command = rm -f $out && $
+            md5=$$( ( cd $workingDir/staging && $
+                      find -P | sort && $
+                      find -P -type f | sort | xargs cat && $
+                      find -P -type l | sort | xargs -r -n 1 readlink $
+                    ) | md5sum) && $
+            md5=$${md5%% *} && $
+            ( echo "app.name=$name" && $
+              echo "app.md5=$$md5" && $
+              echo "app.version=$version" && $
+              echo "legato.version=`cat $$LEGATO_ROOT/version`" $
+            ) > $out
+
+rule PackApp
+  description = Packaging app
+  command = tar cjf $workingDir/$name.$target -C $workingDir/staging . && $
+            tarballSize=`stat -c '%s' $workingDir/$name.$target` && $
+            md5=`grep '^app.md5=' $in | sed 's/^app.md5=//'` && $
+            ( printf '{\n' && $
+              printf '"command":"updateApp",\n' && $
+              printf '"name":"$name",\n' && $
+              printf '"version":"$version",\n' && $
+              printf '"md5":"%s",\n' "$$md5" && $
+              printf '"size":%s\n' "$$tarballSize" && $
+              printf '}' && $
+              cat $workingDir/$name.$target $
+            ) > $out
+
+build Target_Legato_Debug/staging/read-only/lib/libComponent_helloComponent.so: LinkCLib $builddir/component/d32764800b2b8ac27877c4d8ab511ec4/obj/c91d9a8eec87aa53dca3e0047ee3e539.o $builddir/component/d32764800b2b8ac27877c4d8ab511ec4/obj/_componentMain.c.o | /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/build/wp85/framework/lib/liblegato.so
+  ldFlags =  -g -LTarget_Legato_Debug/staging/read-only/lib -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib" "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -lm
+
+build $builddir/component/d32764800b2b8ac27877c4d8ab511ec4/obj/c91d9a8eec87aa53dca3e0047ee3e539.o: CompileC /home/kieutq/Desktop/workspace_dev/hello/helloComponent/helloComponent.c
+  cFlags = $cFlags -I$builddir/component/d32764800b2b8ac27877c4d8ab511ec4/src -DLE_COMPONENT_NAME=helloComponent -DLE_LOG_SESSION=helloComponent_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=helloComponent_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _helloComponent_COMPONENT_INIT()"
+
+build $builddir/component/d32764800b2b8ac27877c4d8ab511ec4/obj/_componentMain.c.o: CompileC $builddir/component/d32764800b2b8ac27877c4d8ab511ec4/src/_componentMain.c
+  cFlags = $cFlags -I$builddir/component/d32764800b2b8ac27877c4d8ab511ec4/src -DLE_COMPONENT_NAME=helloComponent -DLE_LOG_SESSION=helloComponent_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=helloComponent_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _helloComponent_COMPONENT_INIT()"
+
+build Target_Legato_Debug/staging/read-only/lib/libComponent_myAudio.so: LinkCLib $builddir/component/d5608c0577c9d906265706a20a13844f/obj/d7e4e2486e4ca21b7921898a21b46ae4.o $builddir/api/11b367e37b3a8de05a28bb73b4098f37/client/le_audio_client.c.o $builddir/component/d5608c0577c9d906265706a20a13844f/obj/_componentMain.c.o | /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/build/wp85/framework/lib/liblegato.so
+  ldFlags =  -g -LTarget_Legato_Debug/staging/read-only/lib -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib" "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -lm
+
+build $builddir/component/d5608c0577c9d906265706a20a13844f/obj/d7e4e2486e4ca21b7921898a21b46ae4.o: CompileC /home/kieutq/Desktop/workspace_dev/hello/myAudio/myAudio.c || $builddir/ $builddir/api/11b367e37b3a8de05a28bb73b4098f37/client/le_audio_interface.h $builddir/api/11b367e37b3a8de05a28bb73b4098f37/client/le_audio_messages.h
+  cFlags = $cFlags -I$builddir/component/d5608c0577c9d906265706a20a13844f/src -I$builddir/api/11b367e37b3a8de05a28bb73b4098f37/client -DLE_COMPONENT_NAME=myAudio -DLE_LOG_SESSION=myAudio_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=myAudio_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _myAudio_COMPONENT_INIT()"
+
+build $builddir/component/d5608c0577c9d906265706a20a13844f/obj/_componentMain.c.o: CompileC $builddir/component/d5608c0577c9d906265706a20a13844f/src/_componentMain.c
+  cFlags = $cFlags -I$builddir/component/d5608c0577c9d906265706a20a13844f/src -I$builddir/api/11b367e37b3a8de05a28bb73b4098f37/client -DLE_COMPONENT_NAME=myAudio -DLE_LOG_SESSION=myAudio_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=myAudio_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _myAudio_COMPONENT_INIT()"
+
+build $builddir/app/hello/obj/audio/_main.c.o: CompileC Target_Legato_Debug/app/hello/src/audio/_main.c
+  cFlags = $cFlags -DLE_COMPONENT_NAME=audio_exe -DLE_LOG_SESSION=audio_exe_LogSession -DLE_LOG_LEVEL_FILTER_PTR=audio_exe_LogLevelFilterPtr 
+
+build $builddir/app/hello/staging/read-only/bin/audio: LinkCExe $builddir/app/hello/obj/audio/_main.c.o | Target_Legato_Debug/staging/read-only/lib/libComponent_myAudio.so /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/build/wp85/framework/lib/liblegato.so /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/build/$target/framework/lib/liblegato.so
+  ldFlags = -rdynamic -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib" -LTarget_Legato_Debug/staging/read-only/lib "-LTarget_Legato_Debug/staging/read-only/lib" -lComponent_myAudio "-LTarget_Legato_Debug/staging/read-only/lib" -lComponent_myAudio "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -ldl -lm $ldFlags
+
+build $builddir/app/hello/obj/hello/_main.c.o: CompileC Target_Legato_Debug/app/hello/src/hello/_main.c
+  cFlags = $cFlags -DLE_COMPONENT_NAME=hello_exe -DLE_LOG_SESSION=hello_exe_LogSession -DLE_LOG_LEVEL_FILTER_PTR=hello_exe_LogLevelFilterPtr 
+
+build $builddir/app/hello/staging/read-only/bin/hello: LinkCExe $builddir/app/hello/obj/hello/_main.c.o | Target_Legato_Debug/staging/read-only/lib/libComponent_helloComponent.so /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/build/wp85/framework/lib/liblegato.so /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/build/$target/framework/lib/liblegato.so
+  ldFlags = -rdynamic -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib" -LTarget_Legato_Debug/staging/read-only/lib "-LTarget_Legato_Debug/staging/read-only/lib" -lComponent_helloComponent "-LTarget_Legato_Debug/staging/read-only/lib" -lComponent_helloComponent "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -ldl -lm $ldFlags
+
+build $builddir/app/hello/staging/read-only/say_you_do.wav : BundleFile /home/kieutq/Desktop/workspace_dev/hello/say_you_do.wav | $builddir/app/hello/staging/read-only
+  modeFlags = u+rw,g+rw,o+r-w
+build $builddir/app/hello/staging/read-only : MakeDir
+
+build $builddir/app/hello/staging/read-only/lib/libComponent_helloComponent.so : HardLink Target_Legato_Debug/staging/read-only/lib/libComponent_helloComponent.so
+
+build $builddir/app/hello/staging/read-only/lib/libComponent_myAudio.so : HardLink Target_Legato_Debug/staging/read-only/lib/libComponent_myAudio.so
+
+build $builddir/app/hello/staging/info.properties : MakeAppInfoProperties | $builddir/app/hello/staging/read-only $builddir/app/hello/staging/read-only/lib/libComponent_helloComponent.so $builddir/app/hello/staging/read-only/lib/libComponent_myAudio.so $builddir/app/hello/staging/read-only/say_you_do.wav $builddir/app/hello/staging/read-only/bin/audio $builddir/app/hello/staging/read-only/bin/hello $builddir/app/hello/staging/root.cfg
+  name = hello
+  version = 1.0.0
+  workingDir = $builddir/app/hello
+
+build Target_Legato_Debug/hello.$target.update: PackApp $builddir/app/hello/staging/info.properties
+  name = hello
+  version = 1.0.0
+  workingDir = $builddir/app/hello
+
+build $builddir/api/11b367e37b3a8de05a28bb73b4098f37/client/le_audio_client.c.o: CompileC $builddir/api/11b367e37b3a8de05a28bb73b4098f37/client/le_audio_client.c | $builddir/api/11b367e37b3a8de05a28bb73b4098f37/client/le_audio_messages.h $builddir/api/11b367e37b3a8de05a28bb73b4098f37/client/le_audio_interface.h
+  cFlags = $cFlags
+
+build $builddir/api/11b367e37b3a8de05a28bb73b4098f37/client/le_audio_client.c $builddir/api/11b367e37b3a8de05a28bb73b4098f37/client/le_audio_interface.h $builddir/api/11b367e37b3a8de05a28bb73b4098f37/client/le_audio_messages.h: GenInterfaceCode /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/le_audio.api |
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix le_audio --file-prefix le_audio $ifgenFlags
+  outputDir = $builddir/api/11b367e37b3a8de05a28bb73b4098f37/client
+
+build Target_Legato_Debug/build.ninja: RegenNinjaScript | /home/kieutq/Desktop/workspace_dev/hello/hello.adef /home/kieutq/Desktop/workspace_dev/hello/helloComponent/Component.cdef /home/kieutq/Desktop/workspace_dev/hello/myAudio/Component.cdef /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/interfaces/le_audio.api
+

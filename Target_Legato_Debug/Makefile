@@ -30,16 +30,16 @@ CLEAN:=rm -f
 CLEANDIR:=rm -Rf
 
 # MK command
-MKCOMMAND:=cd ..;mkapp -t $(TARGET) -o /tmp/build/hello/Target_Legato_Debug -w /tmp/build/hello/Target_Legato_Debug -i "$(LEGATO_ROOT)/interfaces/modemServices" -i "$(LEGATO_ROOT)/interfaces/airVantage" -i "$(LEGATO_ROOT)/interfaces/positioning" -i "$(LEGATO_ROOT)/interfaces/atServices" -i "$(LEGATO_ROOT)/interfaces" -i "$(LEGATO_ROOT)/interfaces/wifi" -i "$(LEGATO_ROOT)/interfaces/logDaemon" -i "$(LEGATO_ROOT)/interfaces/secureStorage" -i "$(LEGATO_ROOT)/interfaces/supervisor" -s "." -s "$(LEGATO_ROOT)/components" -C -g -X -g -L -g hello.adef
+MKCOMMAND:=cd ..;mkapp -t $(TARGET) -o Target_Legato_Debug -w Target_Legato_Debug -i "$(LEGATO_ROOT)/interfaces" -i "$(LEGATO_ROOT)/interfaces/supervisor" -i "$(LEGATO_ROOT)/interfaces/airVantage" -i "$(LEGATO_ROOT)/interfaces/secureStorage" -i "$(LEGATO_ROOT)/interfaces/logDaemon" -i "$(LEGATO_ROOT)/interfaces/atServices" -i "$(LEGATO_ROOT)/interfaces/modemServices" -i "$(LEGATO_ROOT)/interfaces/wifi" -i "$(LEGATO_ROOT)/interfaces/positioning" -s "$(LEGATO_ROOT)/components" -C -g -X -g -L -g hello.adef
 
 # Custom makefile include: definitions
 -include ../customDefs.mk
 
-.PHONY: all target clean codegen mkCodegen  airvantage sync syncClean
+.PHONY: all target clean codegen mkCodegen  airvantage
 
-all: target airvantage sync
+all: target  airvantage
 
-codegen: mkCodegen sync
+codegen: mkCodegen
 
 mkCodegen:
 	$(MKCOMMAND) --generate-code
@@ -48,19 +48,11 @@ target:
 	$(MKCOMMAND)
 
 airvantage:
-	cd /tmp/build/hello/Target_Legato_Debug && \
-		av-pack -f $(TARGET_ARTIFACT) $(AIRVANTAGE_TYPE)
+	av-pack -f $(TARGET_ARTIFACT) $(AIRVANTAGE_TYPE)
 
-sync:
-	rsync --copy-links --recursive --checksum --delete --delete-excluded --prune-empty-dirs --filter=". .rsync-rules" /tmp/build/hello/Target_Legato_Debug .. 2>/dev/null || true
-
-clean: syncClean
-	$(CLEANDIR) work app component obj src staging api cwe
-	$(CLEAN) *.update *.$(TARGET) manifest.* mktool* *.so *.jar *.ninja* .ninja* *.zip
-
-syncClean:
-	cd /tmp/build/hello/Target_Legato_Debug; $(CLEANDIR) work app component obj src staging api cwe
-	cd /tmp/build/hello/Target_Legato_Debug; $(CLEAN) *.update *.$(TARGET) manifest.* mktool* *.so *.jar *.ninja* .ninja* *.zip
+clean:
+	$(CLEANDIR) work app component obj src staging api
+	$(CLEAN) *.update *.$(TARGET) manifest.* mktool* *.so *.ninja* .ninja* *.zip
 
 # Custom makefile include: targets
 -include ../customTargets.mk

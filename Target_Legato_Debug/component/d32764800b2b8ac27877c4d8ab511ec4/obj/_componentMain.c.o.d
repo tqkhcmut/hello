@@ -1,0 +1,31 @@
+Target_Legato_Debug/component/d32764800b2b8ac27877c4d8ab511ec4/obj/_componentMain.c.o: \
+ Target_Legato_Debug/component/d32764800b2b8ac27877c4d8ab511ec4/src/_componentMain.c \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/legato.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_build_config.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_basics.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_doublyLinkedList.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_singlyLinkedList.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_utf8.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_log.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_mem.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_mutex.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_clock.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_semaphore.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_safeRef.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_thread.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_eventLoop.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_fdMonitor.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_hashmap.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_signals.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_args.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_timer.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_messaging.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_test.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_path.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_pathIter.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_hex.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_dir.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_fileLock.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_json.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/../src/eventLoop.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/../src/log.h

@@ -1,0 +1,31 @@
+Target_Legato_Debug/component/d5608c0577c9d906265706a20a13844f/obj/d7e4e2486e4ca21b7921898a21b46ae4.o: \
+ /home/kieutq/Desktop/workspace_dev/hello/myAudio/myAudio.c \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/legato.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_build_config.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_basics.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_doublyLinkedList.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_singlyLinkedList.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_utf8.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_log.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_mem.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_mutex.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_clock.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_semaphore.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_safeRef.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_thread.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_eventLoop.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_fdMonitor.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_hashmap.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_signals.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_args.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_timer.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_messaging.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_test.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_path.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_pathIter.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_hex.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_dir.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_fileLock.h \
+ /home/kieutq/legato/packages/legato.framework.16.7.0.201609081601/resources/legato/framework/c/inc/le_json.h \
+ Target_Legato_Debug/component/d5608c0577c9d906265706a20a13844f/src/interfaces.h \
+ /home/kieutq/Desktop/workspace_dev/hello/Target_Legato_Debug/api/11b367e37b3a8de05a28bb73b4098f37/client/le_audio_interface.h

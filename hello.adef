@@ -10,7 +10,7 @@ bundles:
 {
 	file:
 	{
-		[r] bqtg.wav bqtg.wav
+		[r] say_you_do.wav 	say_you_do.wav
 	}
 }
 bindings:
@@ -26,7 +26,8 @@ processes:
 	run:
 	{
 		( hello )
+		( audio )
 	}
 	maxCoreDumpFileBytes: 512K
-	maxFileBytes: 512K
+	maxFileBytes: 1024K
 }
